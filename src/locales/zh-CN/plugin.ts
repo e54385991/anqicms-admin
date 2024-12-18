@@ -385,6 +385,12 @@ export default {
   'plugin.htmlcache.storage-type.tencent': '腾讯云存储',
   'plugin.htmlcache.storage-type.qiniu': '七牛云存储',
   'plugin.htmlcache.storage-type.upyun': '又拍云存储',
+  "plugin.htmlcache.storage-type.minio": "MinIO 存储",
+  "plugin.htmlcache.minio.endpoint": "MinIO Endpoint",
+  "plugin.htmlcache.minio.endpoint.placeholder": "请输入 MinIO Endpoint",
+  "plugin.htmlcache.minio.access-key": "Access Key",
+  "plugin.htmlcache.minio.secret-key": "Secret Key",
+  "plugin.htmlcache.minio.bucket-name": "Bucket 名称"
   'plugin.htmlcache.storage-type.ftp': 'FTP传输',
   'plugin.htmlcache.storage-type.ssh': 'SFTP(SSH)传输',
   'plugin.htmlcache.storage-url': '静态网站地址',

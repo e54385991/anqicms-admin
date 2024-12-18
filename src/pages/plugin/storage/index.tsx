@@ -71,7 +71,7 @@ const PluginStorage: React.FC<any> = () => {
               <Divider>
                 <FormattedMessage id="plugin.storage.base" />
               </Divider>
-              <ProFormRadio.Group
+              <P
                 name="storage_type"
                 label={intl.formatMessage({ id: 'plugin.storage.type' })}
                 fieldProps={{
@@ -106,6 +106,11 @@ const PluginStorage: React.FC<any> = () => {
                     value: 'ssh',
                     label: intl.formatMessage({ id: 'plugin.htmlcache.storage-type.ssh' }),
                   },
+                  {
+                    value: 'minio', // 新增 MinIO 类型
+                    label: intl.formatMessage({ id: 'plugin.htmlcache.storage-type.minio' }), // 需要在国际化文件中增加 minio 类型的翻译
+                  },
+
                 ]}
               />
               <ProFormText
@@ -270,6 +275,34 @@ const PluginStorage: React.FC<any> = () => {
                   placeholder=""
                 />
               </div>
+              <div className={storageType !== 'minio' ? 'hidden' : ''}>
+                <Divider>
+                  <FormattedMessage id="plugin.htmlcache.storage-type.minio" /> {/* 需要在国际化文件中增加 MinIO 的翻译 */}
+                </Divider>
+                <ProFormText
+                  name="minio_endpoint"
+                  label={intl.formatMessage({ id: 'plugin.htmlcache.minio.endpoint' })}
+                  placeholder={intl.formatMessage({
+                    id: 'plugin.htmlcache.minio.endpoint.placeholder',
+                  })}
+                />
+                <ProFormText
+                  name="minio_access_key"
+                  label={intl.formatMessage({ id: 'plugin.htmlcache.minio.access-key' })}
+                  placeholder=""
+                />
+                <ProFormText
+                  name="minio_secret_key"
+                  label={intl.formatMessage({ id: 'plugin.htmlcache.minio.secret-key' })}
+                  placeholder=""
+                />
+                <ProFormText
+                  name="minio_bucket"
+                  label={intl.formatMessage({ id: 'plugin.htmlcache.minio.bucket-name' })}
+                  placeholder=""
+                />
+              </div>
+
               <div className={storageType !== 'ssh' ? 'hidden' : ''}>
                 <Divider>
                   <FormattedMessage id="plugin.htmlcache.storage-type.ssh" />
