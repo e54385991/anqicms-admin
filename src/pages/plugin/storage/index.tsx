@@ -71,7 +71,7 @@ const PluginStorage: React.FC<any> = () => {
               <Divider>
                 <FormattedMessage id="plugin.storage.base" />
               </Divider>
-              <P
+              <ProFormRadio.Group
                 name="storage_type"
                 label={intl.formatMessage({ id: 'plugin.storage.type' })}
                 fieldProps={{
@@ -108,10 +108,11 @@ const PluginStorage: React.FC<any> = () => {
                   },
                   {
                     value: 'minio', // 新增 MinIO 类型
-                    label: intl.formatMessage({ id: 'plugin.htmlcache.storage-type.minio' }), // 需要在国际化文件中增加 minio 类型的翻译
-                  }
+                    label: intl.formatMessage({ id: 'plugin.htmlcache.storage-type.minio' }),
+                  },
                 ]}
               />
+
               <ProFormText
                 name="storage_url"
                 label={intl.formatMessage({ id: 'plugin.storage.url' })}
