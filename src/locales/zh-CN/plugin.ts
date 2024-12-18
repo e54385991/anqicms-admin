@@ -390,7 +390,7 @@ export default {
   "plugin.htmlcache.minio.endpoint.placeholder": "请输入 MinIO Endpoint",
   "plugin.htmlcache.minio.access-key": "Access Key",
   "plugin.htmlcache.minio.secret-key": "Secret Key",
-  "plugin.htmlcache.minio.bucket-name": "Bucket 名称"
+  "plugin.htmlcache.minio.bucket-name": "Bucket 名称",
   'plugin.htmlcache.storage-type.ftp': 'FTP传输',
   'plugin.htmlcache.storage-type.ssh': 'SFTP(SSH)传输',
   'plugin.htmlcache.storage-url': '静态网站地址',
