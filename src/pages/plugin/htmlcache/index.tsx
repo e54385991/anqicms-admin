@@ -351,6 +351,10 @@ const PluginHtmlCache: React.FC<any> = () => {
                       value: 'ssh',
                       label: intl.formatMessage({ id: 'plugin.htmlcache.storage-type.ssh' }),
                     },
+                    {
+                      value: 'minio',
+                      label: intl.formatMessage({ id: 'plugin.htmlcache.storage-type.minio' }),
+                    },
                   ]}
                 />
                 <ProFormText
